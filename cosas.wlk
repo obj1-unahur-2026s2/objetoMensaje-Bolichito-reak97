@@ -102,6 +102,77 @@ object placa {
   }
 }
 
+object arito {
+
+  method peso(){
+    return 180
+  }
+  method color(){
+    return celeste 
+  }
+  method material(){
+    return cobre
+  }
+  method esDeColorFuerte(){
+    return self.color().esDeColorFuerte()
+  }
+  method esDeMaterialQueBrilla(){
+    return self.material().esBrillante()
+  }
+}
+
+object banquito{
+  var color= naranja
+
+  method peso(){
+    return 1700
+  }
+  method color(){
+    return color 
+  }
+
+  method cambiarColor(unColor) {
+    color= unColor
+  }
+
+  method material(){
+    return madera
+  }
+  method esDeColorFuerte(){
+    return self.color().esDeColorFuerte()
+  }
+  method esDeMaterialQueBrilla(){
+    return self.material().esBrillante()
+  }
+}
+
+object cajita{
+   var contenido= munieco
+
+  method peso(){
+    return 400 + contenido.peso()
+  }
+  
+  method color(){
+    return rojo 
+  }
+
+  method guardarAdentro(unaCosa){
+    contenido= unaCosa
+  }
+
+  method material(){
+    return cobre
+  }
+  method esDeColorFuerte(){
+    return self.color().esDeColorFuerte()
+  }
+  method esDeMaterialQueBrilla(){
+    return self.material().esBrillante()
+  }
+}
+
+
 object rojo {
   method esDeColorFuerte(){
     return true
@@ -123,6 +194,12 @@ object celeste {
 object pardo {
   method esDeColorFuerte(){
     return false
+  }
+}
+
+object naranja {
+  method esDeColorFuerte(){
+    return true
   }
 }
 
